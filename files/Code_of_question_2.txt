@@ -1,0 +1,38 @@
+Rule :
+
+ {
+    "if": [
+        {
+            "and": [
+                {"<": [{"var": "transactionamount"}, 1000]},
+                {"<": [{"var": "transactioncount"}, 5]}
+            ]
+        },
+        0,
+        {
+            "and": [
+                {
+                    "and": [
+                        {">=": [{"var": "transactionamount"}, 1000]},
+                        {"<": [{"var": "transactionamount"}, 10000]}
+                    ]
+                },
+                {
+                    "and": [
+                        {">=": [{"var": "transactioncount"}, 5]},
+                        {"<": [{"var": "transactioncount"}, 10]}
+                    ]
+                }
+            ]
+        },
+        50,
+        100
+    ]
+}
+
+Data : 
+
+{
+    "transactionamount": 1200,
+    "transactioncount": 5
+}

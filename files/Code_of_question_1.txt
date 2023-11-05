@@ -1,0 +1,32 @@
+Rule : 
+
+{
+  "if": [
+    {
+      "in": [
+        { "var": "var1" },
+        { "var": "var2" }
+      ]
+    },
+    { "var": "var1" },
+    {
+      "if": [
+        {
+          "in": [
+            { "var": "var2" },
+            { "var": "var1" }
+          ]
+        },
+        { "var": "var2" },
+        "neither variable is a part of other"
+      ]
+    }
+  ]
+}
+
+
+Data :
+{
+"var1" : "sat@google.com",
+"var2" : "google.com"
+}
