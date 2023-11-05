@@ -1,4 +1,4 @@
- Drone_Pay_Private_Limited (Use JSON LOGIC)
+# Drone_Pay_Private_Limited (Use JSON LOGIC)
 
 Questions : 
 1]Based on 2 inputs strings (var1 and var2), you need to return var1 if var1 is part of var2 or you need to return var2 if var2 is part of var1 or return "neither variable is a part of other". 
